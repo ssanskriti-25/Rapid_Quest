@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+
+<title>Rapid Quest</title>
+<script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      defer
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      defer
+    ></script>
+    <script
+      src="
+    https://cdn.jsdelivr.net/npm/chart.js@4.3.3/dist/chart.umd.min.js
+    "
+      defer
+    ></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>  
+<body>
+    <div class="container">
+	   <div class="column1">
+
+        <div class="nav-details">
+
+          <div class="col1">
+          <div class="profile-pic">
+            <img src="user.jpg" alt="">
+          </div>
+
+          <div class="intro-sec">
+          <h1>Hi Mike</h1>
+          <h4>welcome back</h4>
+          </div>
+
+          </div>
+          <!-- col1 ends -->
+
+          <div class="nav-division">
+            <div class="navbar">
+              <div class="align-nav">
+              <a href="#"><i class="fa fa-fw fa-search"></i> </a>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <a class="active"href="#"><i class="fa fa-fw fa-home"> </i></a>
+              
+              <a href="#"><i class="fa fa-fw fa-calendar"></i> </a>
+              <a href="#"><i class='fa fa-fw fa-book'></i></a>
+              <a href="#"><i class="fa fa-fw fa-user"></i> </a>
+          
+              <a href="#"><i class="fa fa-fw fa-bell"></i></a>
+              <a href="#"><i class="fa fa-fw fa-sign-out"></i></a>
+            
+
+            </div>
+            <!-- align-nav ends -->
+            </div>
+        
+        <div class="account-details">
+        <p>Today</p>
+        <h3>$19,892</h3>
+        <p>Acoount Balance</p>
+        <h3>$4,000</h3>
+        <p>Year-to-Date Contributions</p>
+        <h3>$1892</h3>
+        <p>Total Interest</p>
+        <div class="button-sec">
+        <select name="language" id="language" style="background-color: #3010c1; color: #fff;">
+          <option value="I want to" selected>I want to</option>
+          <option value="I don't want to">I do not want to</option>
+        </select>
+      </div>
+        <h3>Recent Transactions</h3>        
+        <p>2020-08-07</p>
+        <h4 style="font-size: 10px;">Withdrawal Transfer to Bank-XXX11</h4>        
+        <p>2020-07-21</p>
+        <h4 style="font-size: 10px;">Withdrawal Transfer to Bank-XXX11</h4>
+        <p>2020-07-16</p>
+        <h4 style="font-size: 10px;">Withdrawal Transfer to Bank-XXX11</h4>
+        </div>
+        <!-- account-details ends -->
+        </div>
+        <!-- nav-division ends -->
+
+      </div>
+      <!-- nav-details ends -->
+
+    </div>    
+    <!-- //column1 end -->
+
+    
+<div class="column2">
+
+
+      <!-- Hero section start -->
+<div class="main-section">
+  <div class="hero">
+   <!-- Main section start -->
+   <div class="main">
+     <!-- Header Section start -->
+     <div class="header">
+ 
+           <!-- <div class="section"> -->
+             <h3 style="color: #3010c1;">Retirement Income</h3>
+             <h2>Starting Year 2056</h2>
+           <!-- </div> -->
+ 
+           <!-- Topics Section -->
+           <div class="topics">
+                <div class="details">
+                <h1>$300,000</h1>
+                <h4>My Goal</h4>
+                <div style="background-color:#3010c1; height:2px; width:100%;"></div>
+                </div>
+ 
+                <div class="details">
+                <h1>59%</h1>
+                <h4>Goal Achieved</h4>
+                <div style="background-color:#3010c1; height:2px; width:100%;"></div>
+                </div>
+ 
+                <div class="details">
+                <h1>$300</h1>
+                <h4>Est. Monthly Income</h4>
+                <div style="background-color:#3010c1; height:2px; width:100%;"></div>
+                </div>
+ 
+           </div>
+                <!-- Topics Section End -->
+
+     </div>
+       <!-- Header Section End -->
+
+     <!-- Bar graph section start -->
+     <div class="chartCard"> 
+      <div class="chartBox">
+        <h2>Contribution Overtime</h2>
+        <canvas
+        id="myChart"
+        width="400"
+        height="200"
+        aria-label="chart"
+        role="img"
+      ></canvas> 
+        <!-- <canvas id="myChart"></canvas> -->
+        </div>
+        </div>
+
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+
+    <!-- <script src="js/chart.js"></script> -->
+    <script>
+    // setup 
+    const data = {
+      labels: ['20', '25', '30', '35', '40', '60', '65'],
+      datasets: [{
+        label: 'Employer:K 73,500',
+        data: [18, 12, 6, 9, 12, 3, 9],
+        data:[20,14,8,11,14,5,11],
+        backgroundColor: [
+        'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)'
+        ],
+        
+        borderWidth: 1
+      },
+      {
+        label: 'Employee : K 52,500',
+        data: [18, 12, 6, 9, 12, 3, 9],
+        data:[20,14,8,11,14,5,11],
+        backgroundColor: [
+        'rgba(0, 0, 255, 0.4)',
+          'rgba(0, 0, 255, 0.4)',
+          'rgba(0, 0, 255, 0.4)',
+          'rgba(0, 0, 255, 0.4)',
+          'rgba(0, 0, 255, 0.4)',
+          'rgba(0, 0, 255, 0.4)',
+          'rgba(0, 0, 255, 0.4)'
+        ],
+       
+        borderWidth: 1
+      },
+      {
+        label: 'Total Interest : 244,313',
+        data: [18, 12, 6, 9, 12, 3, 9],
+        data:[20,14,8,11,14,5,11],
+        backgroundColor: [
+          'rgba(5, 140, 255, 0.4)',
+          'rgba(5, 140, 255, 0.4)',
+          'rgba(5, 140, 255, 0.4)',
+          'rgba(5, 140, 255, 0.4)',
+          'rgba(5, 140, 255, 0.4)',
+          'rgba(5, 140, 255, 0.4)',
+          'rgba(5, 140, 255, 0.4)'
+        ],
+        
+        borderWidth: 1
+      },
+
+    ],
+
+
+    datasets: [{
+        label: 'Employer',
+        data: [19, 13, 7, 10, 13, 4, 10],
+        backgroundColor: [
+        'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)'
+        ],
+        
+        borderWidth: 1
+      },
+      {
+        label: 'Employee',
+        data: [19, 13, 7, 10, 13, 4, 10],
+        backgroundColor: [
+        'rgba(0, 0, 255, 0.4)',
+          'rgba(0, 0, 255, 0.4)',
+          'rgba(0, 0, 255, 0.4)',
+          'rgba(0, 0, 255, 0.4)',
+          'rgba(0, 0, 255, 0.4)',
+          'rgba(0, 0, 255, 0.4)',
+          'rgba(0, 0, 255, 0.4)'
+        ],
+        
+        borderWidth: 1
+      },
+      {
+        label: 'Total Interest',
+        data: [19, 13, 7, 10, 13, 4, 10],
+        backgroundColor: [
+          'rgba(5, 140, 255, 0.4)',
+          'rgba(5, 140, 255, 0.4)',
+          'rgba(5, 140, 255, 0.4)',
+          'rgba(5, 140, 255, 0.4)',
+          'rgba(5, 140, 255, 0.4)',
+          'rgba(5, 140, 255, 0.4)',
+          'rgba(5, 140, 255, 0.4)'
+        ],
+        
+        borderWidth: 1
+      },
+
+    ]
+    };
+
+    // config 
+    const config = {
+      type: 'bar',
+      data,
+      options: {
+
+        responsive: false,
+
+        scales: {
+            x:{
+                stacked: true
+            },
+          y: {
+            stacked: true,
+            beginAtZero: true
+          }
+        }
+      }
+    };
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+    const chartVersion = document.getElementById('chartVersion');
+    chartVersion.innerText = Chart.version;
+    </script>
+        <!-- Bar graph section end -->
+
+        <!-- Sales section start -->
+       <div class="sales">
+      <div class="recentOrders">
+        <!-- SalesHeader starts -->
+        <div class="salesHeader">
+          <h4>How do I compare to my peers?</h4>
+          <h5>These number represent current goal achievements</h5>
+          
+          <div class="supreme">
+          <div class="goal-achievement">
+          <div class="ranking">
+          <label for="language">Age:</label>
+          <select name="language" id="language">
+            <option value="javascript">Under 10</option>
+            <option value="python">Under 20</option>
+            <option value="c++" selected>Under 30</option>
+            <option value="java" >Under 40</option>
+          </select>
+          </div>
+           
+          <div class="salary">  
+          <label for="language">Salary:</label>
+          <select name="language" id="language">
+            <option value="javascript">K10-K20</option>
+            <option value="python" selected>K20-K30</option>
+            <option value="c++" >K30-K40</option>
+            <option value="java" >K40-K50</option>
+          </select>    
+          </div>
+
+          <div class="gender">
+          <label for="language">Gender:</label>
+          <select name="language" id="language">
+            <option value="javascript" selected>Male</option>
+            <option value="python">Female</option>
+          </select>
+          </div>
+
+        </div>
+        <!-- goal-achievement ends -->
+
+        <!-- Constainer class start -->
+        <div class="skills-circle">
+          <div class="progress">
+              <span class="title timer" data-from="0" data-to="78" data-speed="1800">78</span>
+              <div class="overlay"></div>
+              <div class="left"></div>
+              <div class="right"></div>
+          </div>
+          <div class="progress">
+              <span class="title timer" data-from="0" data-to="95" data-speed="1500">95</span>
+              <div class="overlay"></div>
+              <div class="left"></div>
+              <div class="right"></div>
+          </div>
+          <div class="progress">
+              <span class="title timer" data-from="0" data-to="59" data-speed="1500">59</span>
+              <div class="overlay"></div>
+              <div class="left"></div>
+              <div class="right"></div>
+          </div>
+          </div>
+          <!-- constainer class ends -->
+
+        </div>
+        <!-- supreme ends -->
+
+        </div>
+        <!-- Sales Header ends -->
+
+      </div> 
+      <!-- recent order class ends -->
+    </div>
+    <!-- sales class ends -->
+
+    </div>
+
+     </div>
+     </div>
+     </div>
+
+
+ 
+	   <div class="column3">
+     <div class="final-sec">   
+      <div class="strategy">
+        <h3>Retirement Strategy</h3>
+        <p>Employee Contribution</p>
+  
+      <div class="range-slider">
+        <div class="last-col">
+      <input type="range" min="0" max="100" value="12" class="slider">
+      <h3 style="padding-left: 10px;">12%</h3>
+      </div>
+  
+        <p>Retirement Age</p>
+        <div class="last-col">
+        <input type="range" min="0" max="100" value="65" class="slider">
+        <h3 style="padding-left: 10px;">65</h3>
+      </div>
+      
+        <div class="last-col">
+        <p>Employee Contribution</p>
+        <h3 style="padding-left: 10px;">8.4%</h3>
+      </div>
+  
+      <div class="last-col">
+        <p>Interest Rate</p>
+        <h3 style="padding-left: 10px;">5%</h3>
+      </div>
+  
+      <div class="last-column1">
+        <a href="#" class="button">Update</a>
+      </div>
+  
+      <div class="last-column2">
+        <h4 style="color: #3010c1; padding-left: 140px;">View Help Docs></h4>
+      </div>
+  
+      <div class="last-col3">
+        <div class="line">
+        <div class="vl"></div>
+        <div class="content" style="padding-left: 10px;">
+        <h4>Are you considering the a <br/> <b>Housing Advance?</b></h4>
+        <p>Limited time reduced interests</p>
+        <p style="color: #3010c1;">Learn More></p>
+      </div>
+      </div>
+      </div>
+
+      </div>
+  
+      <!-- </div> -->
+
+      </div>
+      </div>
+      </div>
+
+	    
+</body>
+</html>

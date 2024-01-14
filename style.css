@@ -1,0 +1,569 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Poppins&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--blue);
+  }
+
+.h1{
+    height: 10%;
+}
+
+
+.column1 {
+    flex: 28%;
+    height: 100vh;
+    padding: 10px;
+    margin: 5px;
+    background-color: #cccccc;
+    border-radius: 10px;
+  }
+
+.col1{
+  display: flex;
+}
+
+.account-details{
+  padding-left: 10px;
+}
+
+.profile-pic{
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-sec{
+    height: 30%
+}
+
+.profile-pic img{
+  border-radius: 50px;
+  height: 50%;
+  width: 60%;
+}
+
+.nav-division{
+  display: flex;
+}
+
+.navbar {
+width: 17%;
+background-color: white;
+overflow: auto;
+border-bottom-left-radius: 30px;
+border-top-left-radius: 30px;
+align-items: center;
+justify-content: center;
+}
+
+.align-nav{
+align-items: center;
+}
+
+/* Navbar links */
+.navbar a {
+float: left;
+text-align: center;
+padding: 12px;
+color: black;
+text-decoration: none;
+font-size: 17px;
+}
+
+.navbar a.active{
+    background-color: #335bf4;
+    border-radius: 10px;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+.navbar a {
+  float: none;
+  display: block;
+}
+}
+
+.column2 {
+    flex: 44%;
+    height: 100vh;
+    padding: 10px;
+    margin: 5px;
+    background-color: white;
+  }
+
+  .topics{
+    display: flex;
+    flex-direction: row;
+  }
+  .details{
+    padding-top: 50px;
+    padding-left: 0px;
+    padding-right: 30px;
+  }
+
+.supreme{
+  display: flex;
+}
+
+.skills-circle{
+  display: flex;
+}
+
+ @media screen and (max-width: 700px){
+    .neu-range-slider{
+      width: 100%;
+    }
+  } 
+    @keyframes load1 {
+      0% {
+        transform: rotate(0deg);
+      }
+    
+      100% {
+        transform: rotate(180deg);
+      }
+    }
+    
+    @keyframes load2 {
+      0% {
+        z-index: 100;
+        transform: rotate(180deg);
+      }
+    
+      100% {
+        z-index: 100;
+        transform: rotate(270deg);
+      }
+    }
+    
+    @keyframes load3 {
+      0% {
+        z-index: 100;
+        transform: rotate(180deg);
+      }
+    
+      100% {
+        z-index: 100;
+        transform: rotate(315deg);
+      }
+    } 
+
+/* responsiveness */
+
+ @keyframes anim {
+  100% {
+    stroke-dashoffset: 157;
+  }
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media (max-width: 991px) {
+  .navigation {
+    left: -300px;
+  }
+  .navigation.active {
+    width: 300px;
+    left: 0;
+  }
+  .nav-details{
+    height: 30%;
+  }
+  main {
+    width: 100%;
+    left: 0;
+  }
+  main.active {
+    left: 300px;
+  }
+  .btn {
+    margin: 0 0 0 20px;
+  }
+  .newCustomers .salesHeader {
+    font-size: 12px;
+    justify-content: space-between;
+  }
+  .cardWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .chartWrapper {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .salesHeader h2 {
+    font-size: 20px;
+  }
+  .chart div {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .sales {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .recentOrders {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardWrapper {
+    grid-template-columns: 1fr;
+  }
+  .user {
+    min-width: 40px;
+  }
+  .navigation {
+    width: 100%;
+    left: -100%;
+    z-index: 1000;
+  }
+  .navigation.active {
+    width: 100%;
+    left: 0;
+  }
+  .breadcrumb {
+    z-index: 10001;
+  }
+  main.active .breadcrumb {
+    position: fixed;
+    color: var(--blue);
+  }
+} 
+
+@media only screen and (max-width: 768px) {
+  .navigation {
+    width: 60px;
+  }
+
+  main.active {
+    margin-left: 60px;
+  }
+} 
+
+
+.progress {
+    width: 80px;
+    height: 80px;
+    font-size: 25px;
+    color: black;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    background: #f9f9fb;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    line-height: 10px;
+    margin: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(66, 169, 90);
+  }
+  
+  .progress::after {
+    content: "%";
+  }
+  .progress .title {
+    position: relative;
+    z-index: 100;
+  }
+  
+  .progress .overlay {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #fafafc;
+  }
+  
+  .progress .left,
+  .progress .right {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 10px solid rgb(66, 169, 90);
+    border-radius: 100px 0px 0px 100px;
+    border-right: 0;
+    transform-origin: right;
+  }
+  
+  .progress .left {
+    animation: load1 1s linear forwards;
+  }
+  
+  .progress:nth-of-type(2) .right,
+  .progress:nth-of-type(3) .right {
+    animation: load2 0.5s linear forwards 1s;
+  }
+  
+  .progress:last-of-type .right,
+  .progress:first-of-type .right {
+    animation: load3 0.8s linear forwards 1s;
+  }
+
+  .range-slider .slider-thumb{
+  position: absolute;
+  width: 1.7em;
+  height: 1.7em;
+  background: #090909; 
+  border-radius: 50%;
+  position: absolute;
+  top: 505;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  box-shadow: inset 0px 1px 2px #909090;
+} 
+
+ .range-slider .slider-thumb::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.7em;
+  height: 0.7em;
+  background: inherit;
+  transition: 0.3s;
+} 
+
+ .range-slider:hover .slider-thumb:before{
+  background: #2ae9c9;
+} 
+
+ .range-slider .tooltip{
+  position: absolute;
+  width: 2.8em;
+  height: 2em;
+  top: -2em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #090909;
+  text-align: center;
+  line-height: 35px;
+  color: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 3px 10px #1f1f1f, inset 0px 1px 2px #909090;
+} 
+
+ .range-slider .tooltip::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 10px solid #090909;
+  bottom: -0.5em;
+  left: 50%;
+  transform: translate(-50%);
+} 
+
+.range-slider .progress {
+  width: 50%;
+  height: 0.4em;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #335bf4 0%, #2ae9c9 100%);
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%);
+  left: 0;
+  pointer-events: none;
+}
+
+
+.column3 {
+    flex: 28%;
+    height: 100vh;
+    padding: 10px;
+    margin: 5px;
+    background-color: #cccccc;
+  border-radius: 10px;
+  }
+
+.last-col{
+  display: flex;
+}
+
+.last-column1{
+    padding-top: 20px;
+  padding-left: 80px;
+}
+
+.button {
+  background-color: #3319a7;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 72px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.vl {
+    border-left: 3px solid rgb(41, 21, 121);
+  }
+  .line{
+    display: flex;
+  }
+ 
+  .last-col{
+    height: 35px;
+  }
+
+  .container {
+     display: flex;
+  }	
+
+
+/* Base styles for non-mobile devices */
+.column1,
+.column2,
+.column3 {
+    height: 100vh;
+}
+
+/* Media query for devices with a maximum width of 768px (tablets) */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .column1,
+    .column2,
+    .column3 {
+        flex: 100%;
+        width: 100%;
+    }
+
+    .navbar {
+        width: 100%;
+        /* display: flex; */
+        border-radius: 0;
+        height: 30px; /* Adjusted height for the navbar */
+        position: fixed;
+        bottom: 0;
+        background-color: #555; /* Add background color to the navbar */
+    }
+
+    .navbar a {
+        display: block;
+        /* display: flex; */
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        padding: 12px;
+    }
+
+    .nav-details {
+        flex-direction: column;
+    }
+
+    .account-details {
+        padding-left: 0;
+    }
+
+    .profile-pic img {
+        width: 50px; /* Adjust as needed */
+        height: 50px; /* Adjust as needed */
+    }
+
+    .range-slider .slider-thumb {
+        top: 495px; /* Adjust as needed */
+    }
+
+    .range-slider .tooltip {
+        top: -2.5em; /* Adjust as needed */
+    }
+
+    body {
+        margin-bottom: 40px; /* Adjusted margin to prevent content from being hidden behind the fixed navbar */
+    }
+}
+
+/* Media query for devices with a maximum width of 500px (smaller screens, e.g., phones) */
+@media screen and (max-width: 500px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .column1,
+    .column2,
+    .column3 {
+        flex: 100%;
+        width: 100%;
+    }
+
+    .navbar {
+        width: 100%;
+        border-radius: 0;
+        position: fixed;
+        bottom: 0;
+        height: 60px; /* Adjusted height for the navbar */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #555; /* Add background color to the navbar */
+    }
+
+    .navbar .align-nav{
+        display: flex;
+    }
+
+    .navbar a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        width: 25%;
+        box-sizing: border-box;
+        padding: 12px;
+    }
+
+    .account-details {
+        padding-left: 0;
+    }
+
+    .profile-pic img {
+        width: 40px; /* Adjust as needed */
+        height: 40px; /* Adjust as needed */
+    }
+
+    .range-slider .slider-thumb {
+        top: 485px; /* Adjust as needed */
+    }
+
+    .range-slider .tooltip {
+        top: -2.8em; /* Adjust as needed */
+    }
+
+    body {
+        margin-bottom: 40px; /* Adjusted margin to prevent content from being hidden behind the fixed navbar */
+    }
+}
